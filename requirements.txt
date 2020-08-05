@@ -1,0 +1,86 @@
+attrs==19.3.0
+Automat==20.2.0
+backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393461/work
+bcrypt==3.1.7
+beautifulsoup4==4.9.1
+bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1588608214987/work
+brotlipy==0.7.0
+certifi==2020.6.20
+cffi==1.14.0
+chardet==3.0.4
+constantly==15.1.0
+cryptography==2.9.2
+cssselect==1.1.0
+decorator==4.4.2
+defusedxml==0.6.0
+entrypoints==0.3
+hyperlink==19.0.0
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1593211370946/work
+incremental==17.5.0
+ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1595101338798/work/dist/ipykernel-5.3.3-py3-none-any.whl
+ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1593235467607/work
+ipython-genutils==0.2.0
+itemadapter @ file:///home/conda/feedstock_root/build_artifacts/itemadapter_1593694453559/work
+jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1595018901065/work
+Jinja2==2.11.2
+Js2Py==0.70
+json5 @ file:///home/conda/feedstock_root/build_artifacts/json5_1591810480056/work
+jsonschema==3.2.0
+jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1594732094290/work
+jupyter-core==4.6.3
+jupyterlab==2.2.0
+jupyterlab-server @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_server_1593951277307/work
+lxml==4.5.0
+MarkupSafe==1.1.1
+mistune==0.8.4
+nbconvert==5.6.1
+nbformat @ file:///home/conda/feedstock_root/build_artifacts/nbformat_1594060262917/work
+notebook @ file:///home/conda/feedstock_root/build_artifacts/notebook_1594078840609/work
+olefile==0.46
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1589925210001/work
+pandocfilters==1.4.2
+parsel @ file:///home/conda/feedstock_root/build_artifacts/parsel_1591122878042/work
+parso==0.7.0
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow @ file:///tmp/build/80754af9/pillow_1594307295532/work
+prometheus-client @ file:///home/conda/feedstock_root/build_artifacts/prometheus_client_1590412252446/work
+prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1592500439797/work
+Protego==0.1.16
+ptyprocess==0.6.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.7
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+PyDispatcher==2.0.5
+Pygments==2.6.1
+PyHamcrest==2.0.2
+pyjsparser==2.7.1
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+pyrsistent==0.16.0
+pyshorteners==1.0.1
+PySocks==1.7.1
+python-dateutil==2.8.1
+pytz==2020.1
+pyzmq==19.0.1
+queuelib==1.5.0
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1592425495151/work
+Scrapy==1.6.0
+scrapy-splash==0.7.2
+Send2Trash==1.5.0
+service-identity==18.1.0
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+soupsieve==2.0.1
+terminado==0.8.3
+testpath==0.4.4
+tornado==6.0.4
+traitlets==4.3.3
+Twisted==20.3.0
+tzlocal==2.1
+urllib3==1.25.9
+w3lib @ file:///home/conda/feedstock_root/build_artifacts/w3lib_1591173357158/work
+wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1592931742287/work
+webencodings==0.5.1
+zipp==3.1.0
+zope.interface==4.7.1
