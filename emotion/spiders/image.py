@@ -133,7 +133,7 @@ class ImageSpider(scrapy.Spider):
         for link in links:
             link = link.xpath('@src').get()
             img_id = str(link).split('.')[-2].split('-')[-1]
-            url = 'https://png.is' + '/find?id=' + img_id
+            url = 'https://png.is/find?id=' + img_id
             yield SplashRequest(url=url,
                                 callback=self.parse_adfBypass,
                                 endpoint='execute',
