@@ -7,5 +7,7 @@ import scrapy
 
 
 class EmotionItem(scrapy.Item):
-    img_url = scrapy.Field()
-    img = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
+    keyword = scrapy.Field()
+    image_name = scrapy.Field()

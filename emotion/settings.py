@@ -13,15 +13,21 @@ SPIDER_MODULES = ['emotion.spiders']
 NEWSPIDER_MODULE = 'emotion.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 64
+CONCURRENT_REQUESTS = 1
 
 SPLASH_URL = 'http://localhost:8050'
+
+DOWNLOAD_TIMEOUT = 15
+
+DNS_TIMEOUT = 3600
+
+LOG_LEVEL = 'INFO'
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -67,8 +73,10 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    # 'scrapy.pipelines.images.ImagesPipeline': 1,
     'emotion.pipelines.EmotionPipeline': 300,
 }
+
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,3 +98,4 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+IMAGES_STORE = '/home/nero/emotions/img_new'
