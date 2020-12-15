@@ -13,9 +13,10 @@ class GoogleSpider(scrapy.Spider):
         'https://google.com',
     ]
 
-    custom_settings = {
-        'IMAGES_STORE': '/home/nero/emotions/google',
-    }
+    # custom_settings = {
+    #     'IMAGES_STORE': 'gs://images-crawler/images/',
+    #     'ITEM_PIPELINES': {"emotion.pipelines.GCSFilePipeline" : 1,},
+    # }
 
     keywords = pd.read_csv('f.csv', header=None)
     k = []
@@ -34,7 +35,7 @@ class GoogleSpider(scrapy.Spider):
           assert(splash:go(args.url))
           assert(splash:wait(0.5))
           local scroll_to = splash:jsfunc("window.scrollTo")
-          for i=1,2 do
+          for i=1,10 do
             scroll_to(0,i*1000)
             if i > 7000 then
                 splash:wait(1.1)

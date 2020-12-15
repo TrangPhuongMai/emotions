@@ -83,15 +83,16 @@ class ImageSpider(scrapy.Spider):
     name = 'image'
     urls = []
     start_urls = ['https://www.shutterstock.com/search/', ]
-    custom_settings = {
-        'IMAGES_STORE': '/home/nero/emotions/shutterstock',
-    }
+    # custom_settings = {
+    #     'IMAGES_STORE': '/home/nero/emotions/shutterstock',
+    # }
 
     def parse(self, response):
         # emotions = ['happy', 'neutral', 'displeasure', 'anger', 'rage']
         # emotions = ['lingonberry+jam+on+bread', ]
-        keywords = ['lingonberry', ]
+        keywords = ['cranberry ', ]
         for keyword in keywords:
+            keyword = keyword.replace(' ','+')
             yield Request(url=self.start_urls[0] + keyword, callback=self.parse_stock, meta={'keyword': keyword})
             # yield Request(url=self.start_urls[0] + emotion + '?mreleased=true', callback=self.parse_stock, )
 
@@ -162,7 +163,7 @@ class ImageSpider(scrapy.Spider):
         local button = splash:select('#findstock')
         button:mouse_click()
         ------------------------------
-        splash:wait(7)
+        splash:wait(8)
         ------------------------------
         splash:set_viewport_full()
         return {
@@ -201,7 +202,6 @@ class ImageSpider(scrapy.Spider):
         img_url = 'https://dl2.findandfound.ga' + img_url
         # 'https://dl2.findandfound.ga/image/bCKYKhQnwNDvHplGuI%2FEeFGbEg3d56ikTpBRaVBqAyhJ3BgPJj1jAGRZfM43B6WAXPMWDA1nvD22w1IwcE1Bvs9slXVtYsqtSOHEU9speA%2Fb1gRizyhnVjm8lCMplvdPXSeByY2AqFTbZY2QveCZ%2FjYUz%2BOjmUBfwEgDQqBp08xhHdTI8W5X7vTHnutD4Y5FejowsYM3l%2BWfhu5WBjE%2BQv5FBVcN7NPEPwyfCW0sKe15wknMTcUf68cjLoW2Rare--nh.jpg'
         print(response.meta['name'])
-        print('hadsfkjasdhjfasdhkjfasdhkjfhsadjkfhasdkfhkjdhskjafahsdkjfhasdkjfhasdkjfhk')
         l.add_value('image_urls', img_url)
         l.add_value('image_name', response.meta['name'])
         l.add_value('keyword', response.meta['keyword'])

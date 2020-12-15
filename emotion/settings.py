@@ -74,6 +74,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'scrapy.pipelines.images.ImagesPipeline': 1,
+    # 'emotions.pipelines.GCSFilePipeline' : 1,
     'emotion.pipelines.EmotionPipeline': 300,
 }
 
@@ -98,4 +99,7 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
-IMAGES_STORE = '/home/nero/emotions/img_new'
+# IMAGES_STORE = '/home/nero/emotions/img_new'
+IMAGES_STORE_GCS_ACL = 'publicRead'
+IMAGES_STORE = 'gs://images-crawler/images/'
+GCS_PROJECT_ID = 'image-crawler-296811'
